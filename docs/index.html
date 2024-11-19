@@ -673,11 +673,115 @@ footer p {
     }
 }
 
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #007bff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f8f9fa;
+}
+
+/* Mobile Responsiveness */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #007bff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
 
 
 </style>
 <body>
-
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">INNOVATEX</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                &#9776; <!-- Hamburger Icon -->
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#future-plans">Vision</a></li>
+                <li><a href="#certifications">Cert</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#video-demonstration">Video Demo</a></li>
+                <li><a href="#code">Codes</a></li>
+                <li><a href="#research-paper">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
     <!-- Background Image -->
     <div class="background-img">
         <img src="https://sweagro.com/wp-content/uploads/2024/06/AdobeStock_728648201-scaled.jpg" alt="Background Image" class="background-img">
@@ -688,12 +792,14 @@ footer p {
         <img src="https://imgur.com/TAN04fH.png" alt="Profile Picture" class="profile-pic">
         <h1>Osei-Bonsu Cephas</h1>
         <h2>Major: Electrical Engineering</h2>
-        <p>I am drawn to majoring in Electronics, with a specific focus on Intelligent Robotics and Environmental Sustainability. My goal is to leverage this expertise to drive positive change in two critical sectors: transportation and environmental sustainability. I envision developing innovative robotic systems that transform transportation by enhancing safety, efficiency, and sustainability through autonomous vehicles and intelligent traffic management. Furthermore, I aim to design cutting-edge sensors for monitoring climate change and air quality, as well as autonomous systems for environmental monitoring, optimize resource usage, and promote eco-friendly practices harnessing the power of robotics to protect our planet, ensure a sustainable future, and improve the quality of life for generations to come.</p>
+        <p>I am drawn to studying electronics  with a commitment to addressing environmental sustainability and societal challenges. My goal is to integrate technological innovation with interdisciplinary approaches to create meaningful change. For instance, I am passionate about designing sensors to monitor climate change and air quality, as well as developing autonomous systems for environmental monitoring and sustainable resource management.
+
+           I believe that combining a deep understanding of engineering principles with insights from environmental studies, policy, and ethics can create holistic solutions to global challenges. By blending technical expertise with a broader understanding of human and ecological systems, I hope to contribute to a future where engineering and sustainability intersect to improve quality of life for generations to come.</p>
         <p><strong>Contact:</strong> cephasoseib001@gmail.com</p>
     </div>
 
     <!-- About Me Section -->
-    <div class="about-me">
+    <div id="about-me" class="about-me">
         <h2>About Me</h2>
         <p>I’m Osei-Bonsu Cephas, a proud General Science graduate from Konongo Odumase Senior High School. Curiosity has always been my compass, guiding me to explore the unknown and challenge myself to uncover the ‘why’ behind everything I encounter. With an unquenchable thirst for knowledge, I see every day as an opportunity to learn and grow. As a passionate tech enthusiast, I’m driven by a bigger purpose: to harness the power of technology in ways that protect our planet and ensure a sustainable future for generations to come</p>
     </div>
@@ -713,44 +819,48 @@ footer p {
     </div>
 
 
-    <!-- Interests Section -->
-    <div class="interests">
-        <h2>Interests</h2>
-        <ul>
-            <li>STEM Education</li>
-            <li>Climate Change</li>
-            <li>Robotics</li>
-            <li>Machine Learning</li>
-            <li>Research</li>
-            <li>Green Technology</li>
-            <li>Internet of Things</li>
-            <li>Artificial Intelligence</li>
-            <li>sustainable Technology</li>
-        </ul>
-    </div>
+<!-- Interests Section -->
+<div id="interests" class="interests">
+    <h2>Interests</h2>
+    <ul>
+        <li>Exploring accessible and impactful STEM education.</li>
+        <li>Developing solutions to combat climate change.</li>
+        <li>Understanding the ethics of advancing technology.</li>
+        <li>Communicating science effectively to diverse audiences.</li>
+        <li>Innovating in robotics and autonomous systems.</li>
+        <li>Exploring machine learning for innovative solutions.</li>
+        <li>Engaging in research to fuel new discoveries.</li>
+        <li>Advancing green technology for sustainable practices.</li>
+        <li>Connecting devices through Internet of Things.</li>
+        <li>Revolutionizing industries with artificial intelligence.</li>
+        <li>Prioritizing sustainable technology for future generations.</li>
+    </ul>
+</div>
 
-    <!-- Skills Section -->
-    <div class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Organization</li>
-            <li>Coordination</li>
-            <li>Persuasive Public Speaking</li>
-            <li>Computational Thinking</li>
-            <li>Arduino</li>
-            <li>Python</li>
-            <li>C++</li>
-            <li>Leadership & Creativity</li>
-            <li>Web Development</li>
-            <li>Cross country Running</li>
-            <li>Video Games</li>
-            <li>Volleyball</li>
-            <li>Youth Empowerment</li>
-            <li>Sustainable Agriculture</li>
-            <li>Transforming Africa Education</li>
 
-        </ul>
-    </div>
+
+   <!-- Skills Section -->
+<div class="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li>Organizing tasks for efficient execution.</li>
+        <li>Conducting interdisciplinary research and analysis.</li>
+        <li>Delivering persuasive and impactful presentations.</li>
+        <li>Applying computational thinking to solve problems.</li>
+        <li>Programming with Arduino for innovative solutions.</li>
+        <li>Coding in Python for data-driven projects.</li>
+        <li>Developing embedded systems using C++.</li>
+        <li>Leading teams with creativity and collaboration.</li>
+        <li>Building functional and aesthetic web interfaces.</li>
+        <li>Running long-distance with endurance and focus.</li>
+        <li>Strategizing and excelling in video games.</li>
+        <li>Playing volleyball with teamwork and precision.</li>
+        <li>Empowering youth through mentorship and guidance.</li>
+        <li>Practicing sustainable methods in agriculture.</li>
+        <li>Innovating education systems to transform Africa.</li>
+    </ul>
+</div>
+
     <section id="achievements">
         <div class="achievements-container">
             <h2>Achievements and Accolades</h2>
@@ -764,7 +874,7 @@ footer p {
                 <li>Raised awareness about water conservation and provided access to clean water for underprivileged communities, benefiting various communities through outreach programs, filtration system installations, and water donation drives</li>
             </ul>
         </div>
-        <div class="future-plans">
+        <div id="future-plans" class="future-plans">
             <h2>Future Plans and Ambition</h2>
             <div class="plan-section">
                 <h3>1. Mitigating Weather Conditions and Air Quality</h3>
@@ -968,7 +1078,7 @@ footer p {
         <div id="projects">
             <h2>My Projects</h2>
         
-            <div class="project-item">
+            <div id="code" class="project-item">
                 <h3>Smart Dustbin</h3>
                 <p>An innovative dustbin to help keep the library tidy.</p>
                 <a href="https://github.com/Cephas0001/CODES/blob/main/CODES%20FOR%20ALL%20MY%20PROJECTS/DUSTBIN/DUSTBIN.ino" class="project-button">View Code on GitHub</a>
@@ -1068,13 +1178,23 @@ footer p {
                 </form>
             </div>
         </section>
+        
+        <script>
+            const toggleButton = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+        
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+        
         <footer>
             <div class="footer-container">
               <div class="social-media">
                 <a href="http://Wa.me/+233551560593" target="_blank" class="social-link">
                   <img src="https://th.bing.com/th?q=Whats+App+Icon.png&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-WW&cc=GH&setlang=en&adlt=moderate&t=1&mw=247" alt="WhatsApp" class="social-icon">
                 </a>
-                <a href="https://www.linkedin.com/in/osei-bonsu-cephas-911731326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
+                <a href="https://www.linkedin.com/in/cephas-bonsu-911731326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link">
                   <img src="https://th.bing.com/th/id/OIP.8OUQAzOlhtNkOtZIHKd_lwHaHa?w=148&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="LinkedIn" class="social-icon">
                 </a>
                 <a href="https://www.tiktok.com/@faithfulness_0551?_t=8pWjhKf4kju&_r=1" target="_blank" class="social-link">
